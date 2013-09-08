@@ -1,7 +1,7 @@
 import sys
-sys.path.insert(0,'..')
+#sys.path.insert(0,'..')
 import unittest
-import cnpj
+import pycnpfj.cnpj as cnpj
 
 class CNPJTests(unittest.TestCase):
 	"""docstring for CNPJTests"""

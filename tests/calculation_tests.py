@@ -1,7 +1,7 @@
 import sys
-sys.path.insert(0,'..')
+#sys.path.insert(0,'..')
 import unittest
-import calculation as calc
+import pycnpfj.calculation as calc
 
 class CalculationTests(unittest.TestCase):
 	"""docstring for CalculationTests"""

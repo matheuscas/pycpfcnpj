@@ -1,7 +1,7 @@
 import sys
-sys.path.insert(0,'..')
+#sys.path.insert(0,'..')
 import unittest
-import cpf
+import pycnpfj.cpf as cpf
 
 class CPFTests(unittest.TestCase):
 	"""docstring for CPFTests"""
