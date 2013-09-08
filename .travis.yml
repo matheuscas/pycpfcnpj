@@ -4,8 +4,6 @@ python:
   - "2.7"
   - "3.2"
   - "3.3"
-install:
-  - pip install -e . --use-mirrors
 before_script:
   - pip install -r requirements.txt --use-mirrors
 # command to run tests
