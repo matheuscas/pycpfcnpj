@@ -1,4 +1,4 @@
-import calculation
+import pycnpfj.calculation as calculation
 
 def validate(cpf_number):
 	first_cpf_weighs = [10,9,8,7,6,5,4,3,2]

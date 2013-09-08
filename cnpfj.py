@@ -1,5 +1,5 @@
-import cpf
-import cnpj
+import pycnpfj.cpf as cpf
+import pycnpfj.cnpj as cnpj
 
 def validate(number):
 	"""Validation function for cpf and cnpj brazilian numbers
