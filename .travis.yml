@@ -7,6 +7,6 @@ python:
 before_script:
   - pip install -r requirements.txt --use-mirrors
 # command to run tests
-script: nosetests -v tests
+script: nosetests -v --with-coverage tests
 after_success:
   - coveralls
