@@ -4,9 +4,8 @@ python:
   - "2.7"
   - "3.2"
   - "3.3"
-before_script:
-  - pip install -r requirements.txt --use-mirrors
-# command to run tests
-script: nosetests -v --with-coverage tests
+install:
+  - "pip install python-coveralls"
+script: nosetests -v tests
 after_success:
   - coveralls
