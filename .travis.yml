@@ -5,7 +5,8 @@ python:
   - "3.2"
   - "3.3"
 install:
-  - "pip install python-coveralls"
+  - "pip install -e . --use-mirrors"
+before_script:
   - "pip install -r requirements.txt --use-mirrors"
 script: 
  - "py.test tests/calculation_tests.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing"
