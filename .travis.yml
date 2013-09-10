@@ -4,12 +4,8 @@ python:
   - "2.7"
   - "3.2"
   - "3.3"
-before_script:
-  - "pip install -r requirements.txt --use-mirrors"
-script: 
- - "py.test tests/calculation_tests.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing"
- - "py.test tests/cnpfj_tests.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing"
- - "py.test tests/cnpj_tests.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing"
- - "py.test tests/cpf_tests.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing"
+install:
+  - "pip install python-coveralls"
+script: nosetests --with-coverage 
 after_success:
   - coveralls
