@@ -6,6 +6,6 @@ python:
   - "3.3"
 install:
   - "pip install python-coveralls"
-script: nosetests -v tests
+script: nosetests nosetests --with-coverage --cover-package calculation --cover-package cpf --cover-package cnpj
 after_success:
   - coveralls
