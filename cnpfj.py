@@ -2,8 +2,16 @@ import pycnpfj.cpf as cpf
 import pycnpfj.cnpj as cnpj
 
 def validate(number):
-	"""Validation function for cpf and cnpj brazilian numbers
-	   'number' must be a string containing only numbers
+	"""This functions acts like a Facade to the other modules cpf and cnpj
+	   and validates either CPF and CNPJ numbers.
+	   Feel free to use this or the other modules directly.
+
+	   :param number: a CPF or CNPJ number. Only numbers.
+	   :type number: string
+	   :return: Bool -- True if number is a valid CPF or CNPJ number. 
+	            False if it is not or do not complain 
+	            with the right size of these numbers.
+
 	"""
 	if len(number) == 11:
 		return cpf.validate(number)

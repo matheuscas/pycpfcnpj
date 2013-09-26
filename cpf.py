@@ -1,6 +1,17 @@
 import pycnpfj.calculation as calculation
 
 def validate(cpf_number):
+	"""This function validates a CPF number.
+
+	This function uses calculation package to calculate both digits
+	and then validates the number.
+
+	:param cpf_number: a CPF number to be validated.  Only numbers.
+	:type cpf_number: string
+	:return: Bool -- True for a valid number, False otherwise.
+
+	"""
+
 	first_cpf_weighs = [10,9,8,7,6,5,4,3,2]
 	second_cpf_weighs = [11,10,9,8,7,6,5,4,3,2]
 	first_part = cpf_number[:9]
