@@ -14,13 +14,22 @@
 
 import sys
 import os
+import socket
+
+project_abspath = '/home/matheus/Development/python/pycnpfj'
+projec_append_path = '/home/matheus/Development/python/'
+
+if 'matheus-total' != socket.gethostname():
+  project_abspath = '/var/build/user_build/pycnpfj'
+  projec_append_path = '/var/build/user_build/'
+
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('/home/matheus/Development/python/pycnpfj'))
+sys.path.insert(0, os.path.abspath(project_abspath))
 #put this cuz pycnpfj is a component module
-sys.path.append('/home/matheus/Development/python/')
+sys.path.append(projec_append_path)
 
 # -- General configuration ------------------------------------------------
 
