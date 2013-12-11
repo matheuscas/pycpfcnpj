@@ -1,4 +1,4 @@
-import pycnpfj.calculation as calculation
+import calculation
 
 def validate(cpf_number):
 	"""This function validates a CPF number.
@@ -11,6 +11,9 @@ def validate(cpf_number):
 	:return: Bool -- True for a valid number, False otherwise.
 
 	"""
+
+	if len(cpf_number) < 14:
+		return False
 
 	first_cpf_weighs = [10,9,8,7,6,5,4,3,2]
 	second_cpf_weighs = [11,10,9,8,7,6,5,4,3,2]
