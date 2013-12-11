@@ -1,4 +1,4 @@
-import calculation
+import pycnpfj.calculation as calculation 
 
 def validate(cnpj_number):
 	"""This function validates a CNPJ number.

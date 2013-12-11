@@ -1,4 +1,4 @@
-import calculation
+import pycnpfj.calculation as calculation 
 
 def validate(cpf_number):
 	"""This function validates a CPF number.
