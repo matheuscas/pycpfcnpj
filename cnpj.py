@@ -1,4 +1,4 @@
-import calc as calc
+import calculation as calc
 
 def validate(cnpj_number):
 	"""This function validates a CNPJ number.
