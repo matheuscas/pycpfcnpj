@@ -1,4 +1,4 @@
-import pycnpfj.calculation as calculation 
+import calc as calc
 
 def validate(cnpj_number):
 	"""This function validates a CNPJ number.
@@ -21,8 +21,8 @@ def validate(cnpj_number):
 	first_digit = cnpj_number[12]
 	second_digit = cnpj_number[13]
 
-	if first_digit == calculation.first_check_digit(first_part, first_cnpj_weighs) and \
-		second_digit == calculation.second_check_digit(cnpj_number[:13],second_cnpj_weighs):
+	if first_digit == calc.first_check_digit(first_part, first_cnpj_weighs) and \
+		second_digit == calc.second_check_digit(cnpj_number[:13],second_cnpj_weighs):
 		return True
 
 	return False

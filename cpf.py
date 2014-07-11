@@ -1,4 +1,4 @@
-import pycnpfj.calculation as calculation 
+import calculation as calc 
 
 def validate(cpf_number):
 	"""This function validates a CPF number.
@@ -21,8 +21,8 @@ def validate(cpf_number):
 	first_digit = cpf_number[9]
 	second_digit = cpf_number[10]
 
-	if first_digit == calculation.first_check_digit(first_part, first_cpf_weighs) and \
-		second_digit == calculation.second_check_digit(cpf_number[:10],second_cpf_weighs):
+	if first_digit == calc.first_check_digit(first_part, first_cpf_weighs) and \
+		second_digit == calc.second_check_digit(cpf_number[:10],second_cpf_weighs):
 		return True
 
 	return False
