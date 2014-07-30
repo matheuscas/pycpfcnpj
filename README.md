@@ -29,6 +29,19 @@ Oh, fork and contribute either if you want to.
 
 Obs.: There is no dependencies. 
 
+Oh, and before I forget, You can generate, only and only for test purposes, a CPF or CNPJ number using the 'gen' module. Easy like above:
+
+```python
+from pycpfcnpj import gen
+gen.cpf()
+gen.cnpj()
+
+Expected output:
+>>> 49384063495
+>>> 20788274885880
+```
+Have fun!
+
 In portuguese:
 --------------
 
@@ -51,4 +64,16 @@ Simples assim! Você também pode usar os pacotes internos que tratam em separad
 
 Fique à vontade em contribuir com o projeto ou da maneira que quiser. Ah, sim: pure python (sem dependências ;) ).
 
+Ah, e antes que eu me esqueça, você pode gerar, só e apenas somente para fins de teste, um número de CPF ou CNPJ utilizando o módulo 'gen'. Fácil como acima:
 
+```python
+from pycpfcnpj import gen
+gen.cpf()
+gen.cnpj()
+
+Expected output:
+>>> 49384063495
+>>> 20788274885880
+```
+
+Divirta-se!
