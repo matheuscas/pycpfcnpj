@@ -4,10 +4,10 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0,parentdir) 
 
 import unittest
-import cnpfj as cnpfj
+import cpfcnpj
 
-class CNPFJTests(unittest.TestCase):
-	"""docstring for CNPFJTests"""
+class CPFCNPJTests(unittest.TestCase):
+	"""docstring for CPFCNPJTests"""
 	def setUp(self):
 		self.valid_cpf = '11144477735'
 		self.invalid_cpf = '11144477736'
@@ -17,22 +17,22 @@ class CNPFJTests(unittest.TestCase):
 		self.invalid_cnpj_size = '114447770001'
 
 	def test_validate_cpf_true(self):
-		self.assertTrue(cnpfj.validate(self.valid_cpf))
+		self.assertTrue(cpfcnpj.validate(self.valid_cpf))
 
 	def test_validate_cpf_false(self):
-		self.assertFalse(cnpfj.validate(self.invalid_cpf))
+		self.assertFalse(cpfcnpj.validate(self.invalid_cpf))
 
 	def test_validate_cnpj_true(self):
-		self.assertTrue(cnpfj.validate(self.valid_cnpj))
+		self.assertTrue(cpfcnpj.validate(self.valid_cnpj))
 
 	def test_validate_cnpj_false(self):
-		self.assertFalse(cnpfj.validate(self.invalid_cnpj))
+		self.assertFalse(cpfcnpj.validate(self.invalid_cnpj))
 
 	def test_wrong_cpf_size(self):
-		self.assertFalse(cnpfj.validate(self.invalid_cpf_size))
+		self.assertFalse(cpfcnpj.validate(self.invalid_cpf_size))
 
 	def test_wrong_cnpj_size(self):
-		self.assertFalse(cnpfj.validate(self.invalid_cnpj_size))
+		self.assertFalse(cpfcnpj.validate(self.invalid_cnpj_size))
 
 
 if __name__ == '__main__':

@@ -6,6 +6,6 @@ python:
   - "3.3"
 install:
   - "pip install python-coveralls"
-script: nosetests --with-coverage --cover-package=pycnpfj.cpf --cover-package=pycnpfj.cnpj --cover-package=pycnpfj.calculation --cover-package=pycnpfj.cnpfj
+script: nosetests --with-coverage --cover-package=pycpfcnpj.cpf --cover-package=pycpfcnpj.cnpj --cover-package=pycpfcnpj.calculation --cover-package=pycpfcnpj.cpfcnpj
 after_success:
-  - coveralls --base_dir pycnpfj/
+  - coveralls --base_dir pycpfcnpj/

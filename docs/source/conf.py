@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Pycnpfj documentation build configuration file, created by
+# pycpfcnpj documentation build configuration file, created by
 # sphinx-quickstart on Thu Sep 26 13:44:08 2013.
 #
 # This file is execfile()d with the current directory set to its
@@ -16,11 +16,11 @@ import sys
 import os
 import socket
 
-project_abspath = '/home/matheus/Development/python/pycnpfj'
+project_abspath = '/home/matheus/Development/python/pycpfcnpj'
 projec_append_path = '/home/matheus/Development/python/'
 
 if 'matheus-total' != socket.gethostname():
-  project_abspath = '/var/build/user_build/pycnpfj'
+  project_abspath = '/var/build/user_build/pycpfcnpj'
   projec_append_path = '/var/build/user_build/'
 
 
@@ -28,7 +28,7 @@ if 'matheus-total' != socket.gethostname():
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath(project_abspath))
-#put this cuz pycnpfj is a component module
+#put this cuz pycpfcnpj is a component module
 sys.path.append(projec_append_path)
 
 # -- General configuration ------------------------------------------------
@@ -58,7 +58,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Pycnpfj'
+project = u'Pycpfcnpj'
 copyright = u'2013, Matheus Cardoso'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -191,7 +191,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Pycnpfjdoc'
+htmlhelp_basename = 'Pycpfcnpj'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -211,7 +211,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Pycnpfj.tex', u'Pycnpfj Documentation',
+  ('index', 'Pycpfcnpj.tex', u'Pycpfcnpj Documentation',
    u'Matheus Cardoso', 'manual'),
 ]
 
@@ -241,7 +241,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'pycnpfj', u'Pycnpfj Documentation',
+    ('index', 'pycpfcnpj', u'Pycpfcnpj Documentation',
      [u'Matheus Cardoso'], 1)
 ]
 
@@ -255,8 +255,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Pycnpfj', u'Pycnpfj Documentation',
-   u'Matheus Cardoso', 'Pycnpfj', 'One line description of project.',
+  ('index', 'Pycpfcnpj', u'Pycpfcnpj Documentation',
+   u'Matheus Cardoso', 'Pycpfcnpj', 'One line description of project.',
    'Miscellaneous'),
 ]
 

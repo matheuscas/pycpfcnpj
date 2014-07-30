@@ -1,34 +1,34 @@
 Project usage examples
 ===================================
 
-Using pycnpfj.cnpfj
+Using pycpfcnpj.cpfcnpj
 -------------------
 .. code-block:: python
    :emphasize-lines: 3,5
 	
-	import pycnpfj.cnpfj as cnpfj
+	import pycpfcnpj.cpfcnpj as cpfcnpj
 
 	valid_cpf = '11144477735'
 	invalid_cpf = '11144477736'
 
-	cnpfj.validate(valid_cpf)
-	cnpfj.validate(invalid_cpf)
+	cpfcnpj.validate(valid_cpf)
+	cpfcnpj.validate(invalid_cpf)
 
 	valid_cnpj = '11444777000161'
 	invalid_cnpj = '11444777000162'
 
-	cnpfj.validate(valid_cnpj)
-	cnpfj.validate(invalid_cnpj)
+	cpfcnpj.validate(valid_cnpj)
+	cpfcnpj.validate(invalid_cnpj)
 
-For pycnpfj.cnpfj it does not matter if the number is a CPF or CNPJ.
+For pycpfcnpj.cpfcnpj it does not matter if the number is a CPF or CNPJ.
 It's just validates!
 
-Using pycnpfj.cpf
+Using pycpfcnpj.cpf
 -----------------	
 .. code-block:: python
    :emphasize-lines: 3,5
 
-   import pycnpfj.cpf as cpf
+   import pycpfcnpj.cpf as cpf
 
    valid_cpf = '11144477735'
    invalid_cpf = '11144477736'
@@ -38,7 +38,7 @@ Using pycnpfj.cpf
 
 In this case, only accepts CPF numbers. 
 	
-Using pycnpfj.cnpj
+Using pycpfcnpj.cnpj
 ------------------	
 .. code-block:: python
    :emphasize-lines: 3,5
