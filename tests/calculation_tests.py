@@ -6,7 +6,7 @@ if sys.version[0] == '2':
 else:
 	import os
 	sys.path.insert(1, os.path.join(sys.path[0], '..'))
-	from . pycpfcnpj import calculation as calc
+	from pycpfcnpj import calculation as calc
 
 
 class CalculationTests(unittest.TestCase):
