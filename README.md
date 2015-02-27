@@ -11,7 +11,7 @@ Python module for brazilian register numbers for persons (CPF) and companies (CN
 Now you can install this module with pip! Yeah! :D
 
 ```
->>>pip install pycpfcnpj
+pip install pycpfcnpj
 ```
 
 ###Quick Start
