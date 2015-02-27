@@ -4,7 +4,12 @@ import unittest
 if sys.version[0] == '2':
 	from pycpfcnpj import calculation as calc
 else:
-	from ..pycpfcnpj import calculation as calc
+	import os
+	import inspect
+	currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+	parentdir = os.path.dirname(currentdir)
+	sys.path.insert(0,parentdir)
+	import pycpfcnpj.calculation as calc
 
 
 class CalculationTests(unittest.TestCase):
