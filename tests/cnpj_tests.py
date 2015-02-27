@@ -1,5 +1,5 @@
 import unittest
-import pycpfcnpj.cnpj as cnpj
+from pycpfcnpj import cnpj
 
 
 class CNPJTests(unittest.TestCase):

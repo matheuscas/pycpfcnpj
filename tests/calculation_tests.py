@@ -1,5 +1,5 @@
 import unittest
-import pycpfcnpj.calculation as calc
+from pycpfcnpj import calculation as calc
 
 
 class CalculationTests(unittest.TestCase):
