@@ -1,6 +1,10 @@
-from __future__ import absolute_import
+import sys
 import unittest
-from pycpfcnpj import calculation as calc
+
+if sys.version[0] == '2':
+	from pycpfcnpj import calculation as calc
+else:
+	from .. pycpfcnpj import calculation as calc
 
 
 class CalculationTests(unittest.TestCase):
