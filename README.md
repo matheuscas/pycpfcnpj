@@ -54,6 +54,13 @@ In portuguese:
 
 Módulo python para validar números de CPF e CNPJ.
 
+###Como instalar:
+Agora você pode instalar o pycpfcnpj usando o pip!\m/
+
+```
+pip install pycpfcnpj
+```
+
 ### Como usar
 ```python
 from pycpfcnpj import cpfcnpj
