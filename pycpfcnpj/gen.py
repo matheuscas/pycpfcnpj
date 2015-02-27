@@ -1,7 +1,7 @@
 import string
 import random
-import cpf as cpf_module
-import cnpj as cnpj_module
+from . import cpf as cpf_module
+from . import cnpj as cnpj_module
 
 def cpf():
 	cpf_ramdom = ''.join(random.choice(string.digits) for i in range(11))

@@ -1,5 +1,5 @@
-import cpf
-import cnpj
+from . import cpf
+from . import cnpj
 
 def validate(number):
 	"""This functions acts like a Facade to the other modules cpf and cnpj

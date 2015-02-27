@@ -1,4 +1,4 @@
-import calculation as calc 
+from . import calculation as calc
 
 def validate(cpf_number):
 	"""This function validates a CPF number.
