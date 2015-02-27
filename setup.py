@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='pycpfcnpj',
-      version='1.0.0',
+      version='1.0.1',
       description='Python module for brazilian register numbers for persons (CPF) and companies (CNPJ).',
       classifiers=[
           'Development Status :: 5 - Production/Stable',
