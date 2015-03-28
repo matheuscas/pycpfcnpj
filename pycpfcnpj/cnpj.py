@@ -16,6 +16,9 @@ def validate(cnpj_number):
     if len(cnpj_number) != 14:
         return False
 
+    if len(set(cnpj_number)) == 1:
+        return False
+
     first_cnpj_weighs = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
     second_cnpj_weighs = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
     first_part = cnpj_number[:12]
