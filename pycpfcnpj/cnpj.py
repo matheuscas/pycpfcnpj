@@ -13,10 +13,8 @@ def validate(cnpj_number):
 
     """
 
-    if len(cnpj_number) != 14:
-        return False
-
-    if len(set(cnpj_number)) == 1:
+    if (len(cnpj_number) != 14 or
+       len(set(cnpj_number)) == 1):
         return False
 
     first_cnpj_weighs = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]

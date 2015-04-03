@@ -13,6 +13,10 @@ class CNPJTests(unittest.TestCase):
 
     def test_validate_cnpj_false(self):
         self.assertFalse(cnpj.validate(self.invalid_cnpj))
+        for i in range(10):
+            self.assertFalse(cnpj.validate(
+                '{0}'.format(i) * 14
+            ))
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

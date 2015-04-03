@@ -13,10 +13,8 @@ def validate(cpf_number):
 
     """
 
-    if len(cpf_number) != 11:
-        return False
-
-    if len(set(cpf_number)) == 1:
+    if (len(cpf_number) != 11 or
+       len(set(cpf_number)) == 1):
         return False
 
     first_cpf_weighs = [10, 9, 8, 7, 6, 5, 4, 3, 2]

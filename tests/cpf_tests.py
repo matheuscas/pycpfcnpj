@@ -14,6 +14,10 @@ class CPFTests(unittest.TestCase):
 
     def test_validate_cpf_false(self):
         self.assertFalse(cpf.validate(self.invalid_cpf))
+        for i in range(10):
+            self.assertFalse(cpf.validate(
+                '{0}'.format(i) * 11
+            ))
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
