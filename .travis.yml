@@ -5,4 +5,4 @@ install:
   - "pip install -r requirements.txt"
 script: py.test --cov=pycpfcnpj tests/*.py
 after_success:
-  - coveralls --base_dir pycpfcnpj/
+  - codecov
