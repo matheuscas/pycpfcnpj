@@ -7,14 +7,14 @@ Python module for brazilian register numbers for persons (CPF) and companies (CN
 
 [![Build Status](https://travis-ci.org/matheuscas/pycpfcnpj.png?branch=master)](https://travis-ci.org/matheuscas/pycpfcnpj)
 
-###How to install
+### How to install
 Now you can install this module with pip! Yeah! :D
 
 ```
 pip install pycpfcnpj
 ```
 
-###Quick Start
+### Quick Start
 To use pycpfcnpj is simples like as every python module shoud be!
 
 ```python
@@ -54,7 +54,7 @@ In portuguese:
 
 Módulo python para validar números de CPF e CNPJ.
 
-###Como instalar:
+### Como instalar:
 Agora você pode instalar o pycpfcnpj usando o pip!\m/
 
 ```
