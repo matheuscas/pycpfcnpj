@@ -5,8 +5,11 @@ Description
 -----------
 Python module for brazilian register numbers for persons (CPF) and companies (CNPJ).
 
+**Python 3 ready!**
+
 [![Build Status](https://travis-ci.org/matheuscas/pycpfcnpj.png?branch=master)](https://travis-ci.org/matheuscas/pycpfcnpj)
 [![codecov](https://codecov.io/gh/matheuscas/pycpfcnpj/branch/master/graph/badge.svg)](https://codecov.io/gh/matheuscas/pycpfcnpj)
+[![PyPI version](https://badge.fury.io/py/pycpfcnpj.svg)](https://badge.fury.io/py/pycpfcnpj)
 
 ### How to install
 Now you can install this module with pip! Yeah! :D
