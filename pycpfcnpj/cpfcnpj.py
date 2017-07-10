@@ -1,5 +1,4 @@
-import string
-
+from .compatible import clear_punctuation
 
 from . import cpf
 from . import cnpj
@@ -17,7 +16,7 @@ def validate(number):
                 with the right size of these numbers.
 
     """
-    clean_number = number.translate(str.maketrans("", "", string.punctuation))
+    clean_number = clear_punctuation(number)
 
     if len(clean_number) == 11:
         return cpf.validate(clean_number)
