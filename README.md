@@ -24,11 +24,18 @@ To use pycpfcnpj is simples like as every python module shoud be!
 ```python
 from pycpfcnpj import cpfcnpj
 cpf_number = '11144477735'
+masked_cpf_number = '111.444.777-35'
 cnpj_number = '11444777000161'
+masked_cnpj_number = '11.444.777/0001-61'
+
 print cpfcnpj.validate(cpf_number)
+print cpfcnpj.validate(masked_cpf_number)
 print cpfcnpj.validate(cnpj_number)
+print cpfcnpj.validate(masked_cnpj_number)
 
 Expected output:
+>>>True
+>>>True
 >>>True
 >>>True
 ```
@@ -69,11 +76,18 @@ pip install pycpfcnpj
 ```python
 from pycpfcnpj import cpfcnpj
 cpf_number = '11144477735'
+masked_cpf_number = '111.444.777-35'
 cnpj_number = '11444777000161'
+masked_cnpj_number = '11.444.777/0001-61'
+
 print cpfcnpj.validate(cpf_number)
+print cpfcnpj.validate(cpf_number_mascara)
 print cpfcnpj.validate(cnpj_number)
+print cpfcnpj.validate(cnpj_number_mascara)
 
 Expected output:
+>>>True
+>>>True
 >>>True
 >>>True
 ```
@@ -95,3 +109,9 @@ Expected output:
 ```
 
 Divirta-se!
+
+Changelog
+-----------
+
+1.1
+- Handles CPF and CNPJ numbers with punctuation marks (Trata números de CPF e CPNJ com sinais de pontuação)

@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='pycpfcnpj',
-      version='1.0.2',
+      version='1.1',
       description='Python module for brazilian register numbers for persons (CPF) and companies (CNPJ).',
       classifiers=[
           'Development Status :: 5 - Production/Stable',
@@ -10,9 +10,10 @@ setup(name='pycpfcnpj',
           'Programming Language :: Python :: 2.7',
           'Programming Language :: Python :: 3.2',
           'Programming Language :: Python :: 3.3',
+          'Programming Language :: Python :: 3.6',
           'Topic :: Software Development :: Libraries :: Python Modules',
       ],
-      keywords='cpf cnpj validation',
+      keywords='cpf cnpj validation generation',
       url='https://github.com/matheuscas/pycpfcnpj',
       author='Matheus Cardoso',
       author_email='matheus.mcas@gmail.com',
