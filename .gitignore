@@ -38,3 +38,6 @@ nosetests.xml
 
 #ides
 .vscode
+
+#tests
+.cache/
