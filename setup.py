@@ -18,7 +18,10 @@ setup(name='pycpfcnpj',
       author='Matheus Cardoso',
       author_email='matheus.mcas@gmail.com',
       license='MIT',
+      install_requires=[
+          'six==1.10.0'
+      ],
       packages=['pycpfcnpj'],
-          test_suite='nose.collector',
-          tests_require=['nose'],
+      test_suite='nose.collector',
+      tests_require=['nose'],
       zip_safe=False)
