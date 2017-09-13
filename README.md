@@ -115,3 +115,6 @@ Changelog
 
 1.1
 - Handles CPF and CNPJ numbers with punctuation marks (Trata números de CPF e CPNJ com sinais de pontuação)
+
+1.2
+- Use `sys` rather than `six` to check python's version and keeps this project 100% free of dependencies.
