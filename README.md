@@ -58,6 +58,19 @@ Expected output:
 >>> 49384063495
 >>> 20788274885880
 ```
+
+And you also can generate CPF or CǸPJ with punctuation marks. :)
+
+```python
+from pycpfcnpj import gen
+gen.cpf_with_punctuation()
+gen.cnpj_with_punctuation()
+
+Expected output:
+>>> 048.891.866-97
+>>> 63.212.638/0361-35
+```
+
 Have fun!
 
 In portuguese:
@@ -108,6 +121,19 @@ Expected output:
 >>> 20788274885880
 ```
 
+E você também pode gerar CPF ou CNPJ com pontuação :)
+
+```python
+from pycpfcnpj import gen
+gen.cpf_with_punctuation()
+gen.cnpj_with_punctuation()
+
+Expected output:
+>>> 048.891.866-97
+>>> 63.212.638/0361-35
+```
+
+
 Divirta-se!
 
 Changelog
@@ -118,3 +144,6 @@ Changelog
 
 1.2
 - Use `sys` rather than `six` to check python's version and keeps this project 100% free of dependencies.
+
+1.3
+- Generate CPF and CNPJ numbers with punctuation marks.
