@@ -56,6 +56,5 @@ class CPFCNPJTests(unittest.TestCase):
         self.assertFalse(cpfcnpj.validate(self.mascared_invalid_cnpj_size))
 
 
-
 if __name__ == '__main__':
     unittest.main(verbosity=2)
