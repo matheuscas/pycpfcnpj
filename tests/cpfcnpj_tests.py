@@ -25,11 +25,17 @@ class CPFCNPJTests(unittest.TestCase):
     def test_validate_cpf_false(self):
         self.assertFalse(cpfcnpj.validate(self.invalid_cpf))
 
+    def test_validate_unicode_cpf_tru(self):
+        self.assertTrue(cpfcnpj.validate(u"11144477735"))
+
     def test_validate_cnpj_true(self):
         self.assertTrue(cpfcnpj.validate(self.valid_cnpj))
 
     def test_validate_cnpj_false(self):
         self.assertFalse(cpfcnpj.validate(self.invalid_cnpj))
+
+    def test_validate_unicode_cnpj_true(self):
+        self.assertTrue(cpfcnpj.validate(unicode(self.valid_cnpj)))
 
     def test_wrong_cpf_size(self):
         self.assertFalse(cpfcnpj.validate(self.invalid_cpf_size))
