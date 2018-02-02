@@ -88,15 +88,15 @@ pip install pycpfcnpj
 ### Como usar
 ```python
 from pycpfcnpj import cpfcnpj
-cpf_number = '11144477735'
-masked_cpf_number = '111.444.777-35'
-cnpj_number = '11444777000161'
-masked_cnpj_number = '11.444.777/0001-61'
+numero_cpf = '11144477735'
+numero_cpf_mascara = '111.444.777-35'
+numero_cnpj = '11444777000161'
+numero_cnpj_mascara = '11.444.777/0001-61'
 
-print cpfcnpj.validate(cpf_number)
-print cpfcnpj.validate(cpf_number_mascara)
-print cpfcnpj.validate(cnpj_number)
-print cpfcnpj.validate(cnpj_number_mascara)
+print cpfcnpj.validate(numero_cpf)
+print cpfcnpj.validate(numero_cpf_mascara)
+print cpfcnpj.validate(numero_cnpj)
+print cpfcnpj.validate(numero_cnpj_mascara)
 
 Expected output:
 >>>True
