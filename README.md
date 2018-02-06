@@ -147,3 +147,6 @@ Changelog
 
 1.3
 - Generate CPF and CNPJ numbers with punctuation marks.
+
+1.4
+- Adding support to unicode values.
