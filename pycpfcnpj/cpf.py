@@ -20,16 +20,13 @@ def validate(cpf_number):
        len(set(_cpf)) == 1):
         return False
 
-    first_cpf_weighs = [10, 9, 8, 7, 6, 5, 4, 3, 2]
-    second_cpf_weighs = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2]
     first_part = _cpf[:9]
+    second_part = _cpf[:10]
     first_digit = _cpf[9]
     second_digit = _cpf[10]
 
-    if (first_digit == calc.first_check_digit(first_part,
-                                              first_cpf_weighs) and
-       second_digit == calc.second_check_digit(_cpf[:10],
-                                               second_cpf_weighs)):
+    if (first_digit == calc.calculate_first_digit(first_part) and
+       second_digit == calc.calculate_second_digit(second_part)):
         return True
 
     return False

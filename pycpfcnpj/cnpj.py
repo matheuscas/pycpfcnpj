@@ -20,16 +20,13 @@ def validate(cnpj_number):
        len(set(_cnpj)) == 1):
         return False
 
-    first_cnpj_weighs = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
-    second_cnpj_weighs = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
     first_part = _cnpj[:12]
+    second_part = _cnpj[:13]
     first_digit = _cnpj[12]
     second_digit = _cnpj[13]
 
-    if (first_digit == calc.first_check_digit(first_part,
-                                              first_cnpj_weighs) and
-       second_digit == calc.second_check_digit(_cnpj[:13],
-                                               second_cnpj_weighs)):
+    if (first_digit == calc.calculate_first_digit(first_part) and
+       second_digit == calc.calculate_second_digit(second_part)):
         return True
 
     return False

@@ -1,20 +1,21 @@
 import string
 import random
+from . import calculation as calc
 from . import cpf as cpf_module
 from . import cnpj as cnpj_module
 
 
 def cpf():
-    cpf_ramdom = ''.join(random.choice(string.digits) for i in range(11))
-    while not cpf_module.validate(cpf_ramdom):
-        cpf_ramdom = ''.join(random.choice(string.digits) for i in range(11))
+    cpf_ramdom = ''.join(random.choice(string.digits) for i in range(9))
+    cpf_ramdom += calc.calculate_first_digit(cpf_ramdom)
+    cpf_ramdom += calc.calculate_second_digit(cpf_ramdom)
     return cpf_ramdom
 
 
 def cnpj():
-    cnpj_ramdom = ''.join(random.choice(string.digits) for i in range(14))
-    while not cnpj_module.validate(cnpj_ramdom):
-        cnpj_ramdom = ''.join(random.choice(string.digits) for i in range(14))
+    cnpj_ramdom = ''.join(random.choice(string.digits) for i in range(12))
+    cnpj_ramdom += calc.calculate_first_digit(cnpj_ramdom)
+    cnpj_ramdom += calc.calculate_second_digit(cnpj_ramdom)
     return cnpj_ramdom
 
 
