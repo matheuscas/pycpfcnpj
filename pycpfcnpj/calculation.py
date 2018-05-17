@@ -14,17 +14,15 @@ def calculate_first_digit(number):
         :param number: cpf (length 9) or cnpf (length 12) 
             string to check the first digit. Only numbers.
         :type number: string
-        :returns: string -- the first digit, X if invalid size
+        :returns: string -- the first digit
 
     """
 
     sum = 0
     if len(number) == 9:
         weights = CPF_WEIGHTS[0]
-    elif len(number) == 12:
-        weights = CNPJ_WEIGHTS[0]
     else:
-        return 'X'
+        weights = CNPJ_WEIGHTS[0]
 
     for i in range(len(number)):
         sum = sum + int(number[i]) * weights[i]
@@ -43,17 +41,15 @@ def calculate_second_digit(number):
         :param number: cpf (length 10) or cnpj 
             (length 13) number with the first digit. Only numbers.
         :type number: string
-        :returns: string -- the second digit, X if invalid size
+        :returns: string -- the second digit
 
     """
 
     sum = 0
     if len(number) == 10:
         weights = CPF_WEIGHTS[1]
-    elif len(number) == 13:
-        weights = CNPJ_WEIGHTS[1]
     else:
-        return 'X'
+        weights = CNPJ_WEIGHTS[1]
 
     for i in range(len(number)):
         sum = sum + int(number[i]) * weights[i]
