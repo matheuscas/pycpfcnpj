@@ -1,2 +1,2 @@
 __author__ = 'Matheus Cardoso'
-__version__ = '1.4'
+__version__ = '1.5'

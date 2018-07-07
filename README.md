@@ -140,7 +140,7 @@ Changelog
 -----------
 
 1.1
-- Handles CPF and CNPJ numbers with punctuation marks (Trata números de CPF e CPNJ com sinais de pontuação)
+- Handles CPF and CNPJ numbers with punctuation marks.
 
 1.2
 - Use `sys` rather than `six` to check python's version and keeps this project 100% free of dependencies.
@@ -150,3 +150,25 @@ Changelog
 
 1.4
 - Adding support to unicode values.
+
+1.5
+- Better CPF and CNPJ generation
+
+
+Log de mudanças
+-----------
+
+1.1
+- Trata números de CPF e CPNJ com sinais de pontuação
+
+1.2
+- Uso do `sys` em vez do `six` para verificar a versão do Python e evitando o uso de libs terceiras
+
+1.3
+- Gera números de CPF e CNPJ com pontuação.
+
+1.4
+- Suporte a unicode.
+
+1.5
+- Geração de CPF e CNPJ mais eficiente. 
