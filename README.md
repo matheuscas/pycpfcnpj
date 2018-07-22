@@ -3,7 +3,7 @@ Pycpfcnpj
 
 Description
 -----------
-Python module for brazilian register numbers for persons (CPF) and companies (CNPJ).
+Python module for brazilian register numbers for persons (CPF) and companies (CNPJ). If want this validation in your web application, please check [my tiny web component](https://github.com/matheuscas/wc-input-cpf-cnpj) that does exactly that. ;)
 
 **Python 3 ready!**
 
