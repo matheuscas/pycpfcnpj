@@ -1,11 +1,6 @@
-import sys
-import string
+import re
 
 
 def clear_punctuation(document):
     """Remove from document all pontuation signals."""
-    document = str(document)
-    if sys.version_info[0] < 3:
-        return document.translate(None, string.punctuation)
-    else:
-        return document.translate(str.maketrans("", "", string.punctuation))
+    return re.sub('\D', '', str(document))
