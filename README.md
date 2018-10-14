@@ -154,6 +154,9 @@ Changelog
 1.5
 - Better CPF and CNPJ generation
 
+1.5.1
+- Use regex to remove punctuation
+
 
 Log de mudanças
 -----------
@@ -172,3 +175,6 @@ Log de mudanças
 
 1.5
 - Geração de CPF e CNPJ mais eficiente. 
+
+1.5.1
+- Regex para remover a pontuação. 
