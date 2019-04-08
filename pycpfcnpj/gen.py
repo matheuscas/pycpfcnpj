@@ -1,8 +1,8 @@
-import string
 import random
+import string
+
 from . import calculation as calc
-from . import cpf as cpf_module
-from . import cnpj as cnpj_module
+from .mask import cpf_mask, cnpj_mask
 
 
 def cpf():
@@ -20,10 +20,12 @@ def cnpj():
 
 
 def cpf_with_punctuation():
-	cpf_ramdom = cpf()
-	return '{}.{}.{}-{}'.format(cpf_ramdom[:3], cpf_ramdom[3:6], cpf_ramdom[6:9], cpf_ramdom[9:])
+    cpf_ramdom = cpf()
+
+    return cpf_mask(cpf_ramdom)
 
 
 def cnpj_with_punctuation():
-	cnpj_ramdom = cnpj()
-	return '{}.{}.{}/{}-{}'.format(cnpj_ramdom[:2], cnpj_ramdom[2:5], cnpj_ramdom[5:8], cnpj_ramdom[8:12], cnpj_ramdom[12:])
+    cnpj_ramdom = cnpj()
+
+    return cnpj_mask(cnpj_ramdom)

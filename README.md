@@ -55,8 +55,8 @@ gen.cpf()
 gen.cnpj()
 
 Expected output:
->>> 49384063495
->>> 20788274885880
+>>> '49384063495'
+>>> '20788274885880'
 ```
 
 And you also can generate CPF or CǸPJ with punctuation marks. :)
@@ -67,8 +67,20 @@ gen.cpf_with_punctuation()
 gen.cnpj_with_punctuation()
 
 Expected output:
->>> 048.891.866-97
->>> 63.212.638/0361-35
+>>> '048.891.866-97'
+>>> '63.212.638/0361-35'
+```
+
+It is also possible to assign punctuation to existing CPF and CNPJ!
+
+```python
+from pycpfcnpj import mask
+mask.cpf_mask('70597084050')
+mask.cnpj_mask('16039776000155')
+
+Expected output:
+>>> '705.970.840-50'
+>>> '16.039.776/0001-55'
 ```
 
 Have fun!
@@ -117,8 +129,8 @@ gen.cpf()
 gen.cnpj()
 
 Expected output:
->>> 49384063495
->>> 20788274885880
+>>> '49384063495'
+>>> '20788274885880'
 ```
 
 E você também pode gerar CPF ou CNPJ com pontuação :)
@@ -129,8 +141,20 @@ gen.cpf_with_punctuation()
 gen.cnpj_with_punctuation()
 
 Expected output:
->>> 048.891.866-97
->>> 63.212.638/0361-35
+>>> '048.891.866-97'
+>>> '63.212.638/0361-35'
+```
+
+Também é possivel atribuir pontuação a CPF e CNPJ existentes!
+
+```python
+from pycpfcnpj import mask
+mask.cpf_mask('70597084050')
+mask.cnpj_mask('16039776000155')
+
+Expected output:
+>>> '705.970.840-50'
+>>> '16.039.776/0001-55'
 ```
 
 
