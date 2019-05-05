@@ -11,6 +11,10 @@ Python module for brazilian register numbers for persons (CPF) and companies (CN
 [![codecov](https://codecov.io/gh/matheuscas/pycpfcnpj/branch/master/graph/badge.svg)](https://codecov.io/gh/matheuscas/pycpfcnpj)
 [![PyPI version](https://badge.fury.io/py/pycpfcnpj.svg)](https://badge.fury.io/py/pycpfcnpj)
 
+#### Related projects
+- [Pycnpj-crawler](https://github.com/matheuscas/pycnpj-crawler)
+
+
 ### How to install
 Now you can install this module with pip! Yeah! :D
 
@@ -84,6 +88,9 @@ Agora você pode instalar o pycpfcnpj usando o pip!\m/
 ```
 pip install pycpfcnpj
 ```
+
+#### Projetos relacionados
+- [Pycnpj-crawler](https://github.com/matheuscas/pycnpj-crawler)
 
 ### Como usar
 ```python
