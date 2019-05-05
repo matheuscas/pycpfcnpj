@@ -12,7 +12,7 @@ Python module for brazilian register numbers for persons (CPF) and companies (CN
 [![PyPI version](https://badge.fury.io/py/pycpfcnpj.svg)](https://badge.fury.io/py/pycpfcnpj)
 
 #### Related projects
-- [Pycnpj-crawler](https://github.com/matheuscas/pycnpj-crawler)
+- [Pycnpj-crawler](https://github.com/matheuscas/pycnpj-crawler): Python module that crawls data for a given CNPJ on the government website of each state (please check the supported states).
 
 
 ### How to install
