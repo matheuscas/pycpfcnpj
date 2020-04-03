@@ -24,7 +24,7 @@ pip install pycpfcnpj
 ```
 
 ### Quick Start
-To use pycpfcnpj is simples like as every python module shoud be!
+To use pycpfcnpj is simples like as every python module should be!
 
 ```python
 from pycpfcnpj import cpfcnpj
@@ -50,7 +50,7 @@ You can use, as well, the cpf and cnpj packages. The cpfcnpj is like a Facade to
 
 Oh, fork and contribute either if you want to.
 
-Obs.: There is no dependencies. 
+Obs.: There is no dependencies.
 
 Oh, and before I forget, You can generate, only and only for test purposes, a CPF or CNPJ number using the 'gen' module. Easy like above:
 
@@ -113,7 +113,7 @@ Expected output:
 >>>True
 ```
 
-Simples assim! Você também pode usar os pacotes internos que tratam em separado os números de CPF e CNPJ. O módulo 'cpfcnpj' é um tipo de interface para os módulos mais especificos e se encarrega de saber quando você está passando um CPF ou um CNPJ. 
+Simples assim! Você também pode usar os pacotes internos que tratam em separado os números de CPF e CNPJ. O módulo 'cpfcnpj' é um tipo de interface para os módulos mais especificos e se encarrega de saber quando você está passando um CPF ou um CNPJ.
 
 Fique à vontade em contribuir com o projeto ou da maneira que quiser. Ah, sim: pure python (sem dependências ;) ).
 
@@ -146,6 +146,9 @@ Divirta-se!
 
 Changelog
 -----------
+1.6.0
+- Remove python 2.7 support
+- Add python 3.8 support
 
 1.1
 - Handles CPF and CNPJ numbers with punctuation marks.
@@ -168,6 +171,9 @@ Changelog
 
 Log de mudanças
 -----------
+1.6.0
+- Remove suporte para python 2.7
+- Adiciona suporte para python 3.8
 
 1.1
 - Trata números de CPF e CPNJ com sinais de pontuação
@@ -182,7 +188,7 @@ Log de mudanças
 - Suporte a unicode.
 
 1.5
-- Geração de CPF e CNPJ mais eficiente. 
+- Geração de CPF e CNPJ mais eficiente.
 
 1.5.1
-- Regex para remover a pontuação. 
+- Regex para remover a pontuação.

@@ -1,16 +1,17 @@
 from setuptools import setup
 
 setup(name='pycpfcnpj',
-      version='1.5.1',
+      version='1.6.0',
       description='Python module for brazilian register numbers for persons (CPF) and companies (CNPJ).',
       classifiers=[
           'Development Status :: 5 - Production/Stable',
           'License :: OSI Approved :: MIT License',
-          'Programming Language :: Python :: 2.6',
-          'Programming Language :: Python :: 2.7',
+          'Programming Language :: Python :: 3',
           'Programming Language :: Python :: 3.2',
           'Programming Language :: Python :: 3.3',
           'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
           'Topic :: Software Development :: Libraries :: Python Modules',
       ],
       keywords='cpf cnpj validation generation',
