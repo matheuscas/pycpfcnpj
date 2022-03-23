@@ -146,6 +146,9 @@ Divirta-se!
 
 Changelog
 -----------
+1.7.0
+- Rasing ValueError in case there is whitespace in string
+
 1.6.0
 - Remove python 2.7 support
 - Add python 3.8 support
@@ -171,6 +174,9 @@ Changelog
 
 Log de mudanças
 -----------
+1.7.0
+- Aciona excessão ValueError caso exista espaços em branco dentro da string
+
 1.6.0
 - Remove suporte para python 2.7
 - Adiciona suporte para python 3.8
