@@ -1,3 +1,4 @@
+from multiprocessing.sharedctypes import Value
 import unittest
 from pycpfcnpj import cpfcnpj
 
@@ -8,9 +9,11 @@ class CPFCNPJTests(unittest.TestCase):
         self.valid_cpf = '11144477735'
         self.invalid_cpf = '11144477736'
         self.invalid_cpf_size = '111444777'
+        self.valid_cpf_whitespaces = '111444 77735'
         self.valid_cnpj = '11444777000161'
         self.invalid_cnpj = '11444777000162'
         self.invalid_cnpj_size = '114447770001'
+        self.valid_cnpj_whitespaces = '11444 777000161'
 
         self.mascared_valid_cpf = '111.444.777-35'
         self.mascared_invalid_cpf = '111.444.777-36'
@@ -61,6 +64,11 @@ class CPFCNPJTests(unittest.TestCase):
     def mascared_test_wrong_cnpj_size(self):
         self.assertFalse(cpfcnpj.validate(self.mascared_invalid_cnpj_size))
 
+    def test_validate_cnpj_with_whitespace(self):
+        self.assertRaises(ValueError, cpfcnpj.validate(self.valid_cnpj_whitespaces))
+
+    def test_validate_cpf_with_whitespace(self):
+        self.assertRaises(ValueError, cpfcnpj.validate(self.valid_cpf_whitespaces))
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

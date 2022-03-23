@@ -10,6 +10,7 @@ class CPFTests(unittest.TestCase):
         self.masked_valid_cpf = '111.444.777-35'
         self.invalid_cpf = '11144477736'
         self.masked_invalid_cpf = '111.444.777-36'
+        self.valid_cpf_whitespaces = '111444 77735'
 
     def test_validate_cpf_true(self):
         self.assertTrue(cpf.validate(self.valid_cpf))
@@ -40,6 +41,9 @@ class CPFTests(unittest.TestCase):
 
     def test_validate_masked_unicode_cpf_false(self):
         self.assertFalse(cpf.validate(u'111.444.777-38'))
+
+    def test_validate_cpf_with_whitespaces(self):
+        self.assertRaises(ValueError, cpf.validate(self.valid_cpf_whitespaces))
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
