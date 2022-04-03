@@ -147,7 +147,7 @@ Divirta-se!
 Changelog
 -----------
 1.7.0
-- Handling character alphabet and empty string
+- Returning false for alphabet characters and empty string
 
 1.6.0
 - Remove python 2.7 support
