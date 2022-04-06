@@ -147,7 +147,7 @@ Divirta-se!
 Changelog
 -----------
 1.7.0
-- Returning false for alphabet characters and empty string
+- Invalidates cpf/cnpjs containing non-numeric characters and spaces.
 
 1.6.0
 - Remove python 2.7 support
@@ -175,7 +175,7 @@ Changelog
 Log de mudanças
 -----------
 1.7.0
-- Retornando false para caracteres de alfabeto e string vazia
+- Invalida cpf/cnpjs que contém caracteres não numéricos e espaços.
 
 1.6.0
 - Remove suporte para python 2.7
