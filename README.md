@@ -33,10 +33,10 @@ masked_cpf_number = '111.444.777-35'
 cnpj_number = '11444777000161'
 masked_cnpj_number = '11.444.777/0001-61'
 
-print cpfcnpj.validate(cpf_number)
-print cpfcnpj.validate(masked_cpf_number)
-print cpfcnpj.validate(cnpj_number)
-print cpfcnpj.validate(masked_cnpj_number)
+print(cpfcnpj.validate(cpf_number))
+print(cpfcnpj.validate(masked_cpf_number))
+print(cpfcnpj.validate(cnpj_number))
+print(cpfcnpj.validate(masked_cnpj_number))
 
 Expected output:
 >>>True
@@ -52,7 +52,7 @@ Oh, fork and contribute either if you want to.
 
 Obs.: There is no dependencies.
 
-Oh, and before I forget, You can generate, only and only for test purposes, a CPF or CNPJ number using the 'gen' module. Easy like above:
+Oh, and before I forget, you can generate, only and only for test purposes, a CPF or CNPJ number using the 'gen' module. Easy like above:
 
 ```python
 from pycpfcnpj import gen
@@ -64,7 +64,7 @@ Expected output:
 >>> 20788274885880
 ```
 
-And you also can generate CPF or CǸPJ with punctuation marks. :)
+Also, you can generate CPF or CǸPJ with punctuation marks. :)
 
 ```python
 from pycpfcnpj import gen
@@ -101,10 +101,10 @@ masked_cpf_number = '111.444.777-35'
 cnpj_number = '11444777000161'
 masked_cnpj_number = '11.444.777/0001-61'
 
-print cpfcnpj.validate(cpf_number)
-print cpfcnpj.validate(cpf_number_mascara)
-print cpfcnpj.validate(cnpj_number)
-print cpfcnpj.validate(cnpj_number_mascara)
+print(cpfcnpj.validate(cpf_number))
+print(cpfcnpj.validate(masked_cpf_number))
+print(cpfcnpj.validate(cnpj_number))
+print(cpfcnpj.validate(masked_cnpj_number))
 
 Expected output:
 >>>True
@@ -113,7 +113,8 @@ Expected output:
 >>>True
 ```
 
-Simples assim! Você também pode usar os pacotes internos que tratam em separado os números de CPF e CNPJ. O módulo 'cpfcnpj' é um tipo de interface para os módulos mais especificos e se encarrega de saber quando você está passando um CPF ou um CNPJ.
+Simples assim! Você também pode usar os pacotes internos que tratam em separado os números de CPF e CNPJ. 
+O módulo 'cpfcnpj' é um tipo de interface para os módulos mais específicos e se encarrega de saber quando você está passando um CPF ou um CNPJ.
 
 Fique à vontade em contribuir com o projeto ou da maneira que quiser. Ah, sim: pure python (sem dependências ;) ).
 
