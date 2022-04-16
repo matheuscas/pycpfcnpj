@@ -1,4 +1,9 @@
+import pathlib
 from setuptools import setup
+
+current_directory = pathlib.Path(__file__).parent
+
+README = (current_directory / "README.md").read_text()
 
 setup(
     name="pycpfcnpj",
@@ -19,4 +24,6 @@ setup(
     test_suite="nose.collector",
     tests_require=["nose"],
     zip_safe=False,
+    long_description=README,
+    long_description_content_type="text/markdown",
 )
