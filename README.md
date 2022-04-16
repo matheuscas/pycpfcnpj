@@ -146,6 +146,9 @@ Divirta-se!
 
 Changelog
 -----------
+1.7.0
+- Invalidates cpf/cnpjs containing non-numeric characters and spaces.
+
 1.6.0
 - Remove python 2.7 support
 - Add python 3.8 support
@@ -171,6 +174,9 @@ Changelog
 
 Log de mudanças
 -----------
+1.7.0
+- Invalida cpf/cnpjs que contém caracteres não numéricos e espaços.
+
 1.6.0
 - Remove suporte para python 2.7
 - Adiciona suporte para python 3.8
