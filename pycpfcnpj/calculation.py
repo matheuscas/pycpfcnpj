@@ -1,13 +1,13 @@
-DIVISOR = 11
+DIVISOR: int = 11
 
-CPF_WEIGHTS = ((10, 9, 8, 7, 6, 5, 4, 3, 2),
+CPF_WEIGHTS: tuple = ((10, 9, 8, 7, 6, 5, 4, 3, 2),
               (11, 10, 9, 8, 7, 6, 5, 4, 3, 2))
-CNPJ_WEIGHTS = ((5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2),
+CNPJ_WEIGHTS: tuple = ((5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2),
                (6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2))
 
 
 
-def calculate_first_digit(number):
+def calculate_first_digit(number: str) -> str:
     """ This function calculates the first check digit of a
         cpf or cnpj.
 
@@ -18,21 +18,21 @@ def calculate_first_digit(number):
 
     """
 
-    sum = 0
+    sum: int = 0
     if len(number) == 9:
-        weights = CPF_WEIGHTS[0]
+        weights: tuple = CPF_WEIGHTS[0]
     else:
-        weights = CNPJ_WEIGHTS[0]
+        weights: tuple = CNPJ_WEIGHTS[0]
 
     for i in range(len(number)):
-        sum = sum + int(number[i]) * weights[i]
-    rest_division = sum % DIVISOR
+        sum: int = sum + int(number[i]) * weights[i]
+    rest_division: int = sum % DIVISOR
     if rest_division < 2:
         return '0'
     return str(11 - rest_division)
 
 
-def calculate_second_digit(number):
+def calculate_second_digit(number: str) -> str:
     """ This function calculates the second check digit of
         a cpf or cnpj.
 
@@ -45,15 +45,15 @@ def calculate_second_digit(number):
 
     """
 
-    sum = 0
+    sum: int = 0
     if len(number) == 10:
-        weights = CPF_WEIGHTS[1]
+        weights: tuple = CPF_WEIGHTS[1]
     else:
-        weights = CNPJ_WEIGHTS[1]
+        weights: tuple = CNPJ_WEIGHTS[1]
 
     for i in range(len(number)):
-        sum = sum + int(number[i]) * weights[i]
-    rest_division = sum % DIVISOR
+        sum: int = sum + int(number[i]) * weights[i]
+    rest_division: int = sum % DIVISOR
     if rest_division < 2:
         return '0'
     return str(11 - rest_division)
