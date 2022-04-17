@@ -50,7 +50,7 @@ def calculate_second_digit(number: str) -> str:
 
     sum: int = 0
     if len(number) == 10:
-        weights: Tuple = CPF_WEIGHTS[1]
+        weights: tuple = CPF_WEIGHTS[1]
     else:
         weights: Tuple = CNPJ_WEIGHTS[1]
 
