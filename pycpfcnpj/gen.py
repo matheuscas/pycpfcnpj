@@ -7,15 +7,15 @@ from . import cnpj as cnpj_module
 
 def cpf() -> str:
     cpf_ramdom: str = ''.join(random.choice(string.digits) for i in range(9))
-    cpf_ramdom: str += calc.calculate_first_digit(cpf_ramdom)
-    cpf_ramdom: str += calc.calculate_second_digit(cpf_ramdom)
+    cpf_ramdom += calc.calculate_first_digit(cpf_ramdom)
+    cpf_ramdom += calc.calculate_second_digit(cpf_ramdom)
     return cpf_ramdom
 
 
 def cnpj() -> str:
     cnpj_ramdom: str = ''.join(random.choice(string.digits) for i in range(12))
-    cnpj_ramdom: str += calc.calculate_first_digit(cnpj_ramdom)
-    cnpj_ramdom: str += calc.calculate_second_digit(cnpj_ramdom)
+    cnpj_ramdom += calc.calculate_first_digit(cnpj_ramdom)
+    cnpj_ramdom += calc.calculate_second_digit(cnpj_ramdom)
     return cnpj_ramdom
 
 
