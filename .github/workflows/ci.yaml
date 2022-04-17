@@ -1,7 +1,7 @@
 name: Test pipeline
 on:
   pull_request:
-    branches: [ci]
+    branches: [master]
 
 jobs:
   build:
