@@ -147,6 +147,9 @@ Divirta-se!
 
 Changelog
 -----------
+1.7.1
+- Fix for cpf/cnpjs containing special characters.
+
 1.7.0
 - Invalidates cpf/cnpjs containing non-numeric characters and spaces.
 
@@ -175,6 +178,9 @@ Changelog
 
 Log de mudanças
 -----------
+1.7.1
+- Correção para cpf/cnpjs que contém caracteres especials.
+
 1.7.0
 - Invalida cpf/cnpjs que contém caracteres não numéricos e espaços.
 
