@@ -1,4 +1,5 @@
 import pathlib
+
 from setuptools import setup
 
 current_directory = pathlib.Path(__file__).parent
@@ -7,7 +8,7 @@ README = (current_directory / "README.md").read_text()
 
 setup(
     name="pycpfcnpj",
-    version="1.7.0",
+    version="1.7.1",
     description="Python module for brazilian register numbers for persons (CPF) and companies (CNPJ).",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
