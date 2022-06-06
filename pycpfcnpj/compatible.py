@@ -1,6 +1,6 @@
 def check_special_characters(func):
     def wrapper(document):
-        not_digit = list(filter(lambda x: not x.isdigit(), clear_punctuation(document)))
+        not_digit = [i for i in clear_punctuation(document) if not i.isdigit()]
         return False if not_digit else func(document)
 
     return wrapper
