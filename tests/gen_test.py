@@ -1,27 +1,36 @@
-import unittest
+import pytest
 from pycpfcnpj import gen, cpf, cnpj
 
-class GenerateCPFTest(unittest.TestCase):
-	"""docstring for GenerateCPFTest"""
-	def setUp(self):
-		self.masked_valid_cpf = gen.cpf_with_punctuation()
 
-	def test_validate_masked_cnpj_true(self):
-		self.assertTrue(cpf.validate(self.masked_valid_cpf))
-
-	def test_valif_cpf_without_mask_true(self):
-		cpf_result =(self.masked_valid_cpf.replace(".","")).replace("-","")
-		self.assertTrue(cpf.validate(cpf_result))
+"""docstring for GenerateCPFTest"""
 
 
-class GenerateCNPJTest(unittest.TestCase):
-	"""docstring for GenerateCNPJTest"""
-	def setUp(self):
-		self.masked_valid_cnpj = gen.cnpj_with_punctuation()
+@pytest.fixture
+def masked_valid_cpf():
+    return gen.cpf_with_punctuation()
 
-	def test_validate_masked_cnpj_true(self):
-		self.assertTrue(cnpj.validate(self.masked_valid_cnpj))
 
-	def test_valid_cnpj_without_mask_true(self):
-		cnpj_result =(self.masked_valid_cnpj.replace(".","")).replace("-","")
-		self.assertTrue(cnpj.validate(cnpj_result))
+def test_validate_masked_cnpj_true(masked_valid_cpf):
+    assert cpf.validate(masked_valid_cpf) == True
+
+
+def test_valif_cpf_without_mask_true(masked_valid_cpf):
+    cpf_result = (masked_valid_cpf.replace(".", "")).replace("-", "")
+    assert cpf.validate(cpf_result) == True
+
+
+"""docstring for GenerateCNPJTest"""
+
+
+@pytest.fixture
+def masked_valid_cnpj():
+    return gen.cnpj_with_punctuation()
+
+
+def test_validate_masked_cnpj_true(masked_valid_cnpj):
+    assert cnpj.validate(masked_valid_cnpj) == True
+
+
+def test_valid_cnpj_without_mask_true(masked_valid_cnpj):
+    cnpj_result = (masked_valid_cnpj.replace(".", "")).replace("-", "")
+    assert cnpj.validate(cnpj_result) == True
