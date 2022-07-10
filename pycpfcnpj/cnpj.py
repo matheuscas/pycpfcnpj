@@ -2,6 +2,7 @@ from . import calculation as calc
 from . import compatible as compat
 
 
+@compat.check_special_characters
 def validate(cnpj_number):
     """This function validates a CNPJ number.
 
@@ -16,8 +17,7 @@ def validate(cnpj_number):
 
     _cnpj = compat.clear_punctuation(cnpj_number)
 
-    if (len(_cnpj) != 14 or
-       len(set(_cnpj)) == 1):
+    if len(_cnpj) != 14 or len(set(_cnpj)) == 1:
         return False
 
     first_part = _cnpj[:12]
@@ -25,8 +25,9 @@ def validate(cnpj_number):
     first_digit = _cnpj[12]
     second_digit = _cnpj[13]
 
-    if (first_digit == calc.calculate_first_digit(first_part) and
-       second_digit == calc.calculate_second_digit(second_part)):
+    if first_digit == calc.calculate_first_digit(
+        first_part
+    ) and second_digit == calc.calculate_second_digit(second_part):
         return True
 
     return False
