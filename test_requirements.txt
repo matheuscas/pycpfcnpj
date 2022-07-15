@@ -1,7 +1,7 @@
 apipkg==1.4
 certifi==2017.4.17
 chardet==3.0.4
-codecov==2.0.9
+codecov==2.0.16
 coverage==4.0.3
 execnet==1.4.1
 httpretty==0.8.14
