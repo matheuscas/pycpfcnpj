@@ -1,5 +1,5 @@
-from multiprocessing.sharedctypes import Value
 import unittest
+
 from pycpfcnpj import cpfcnpj
 
 
@@ -17,6 +17,8 @@ class CPFCNPJTests(unittest.TestCase):
         self.invalid_cnpj_whitespaces = "11444 777000161"
         self.invalid_cpf_with_alphabetic = "111444A77735"
         self.invalid_cnpj_with_alphabetic = "11444d777000161"
+        self.invalid_cpf_with_special_character = "*55759997&9"
+        self.invalid_cnpj_with_special_character = "+557599976%162"
 
         self.mascared_valid_cpf = "111.444.777-35"
         self.mascared_invalid_cpf = "111.444.777-36"
@@ -32,7 +34,7 @@ class CPFCNPJTests(unittest.TestCase):
         self.assertFalse(cpfcnpj.validate(self.invalid_cpf))
 
     def test_validate_unicode_cpf_tru(self):
-        self.assertTrue(cpfcnpj.validate(u"11144477735"))
+        self.assertTrue(cpfcnpj.validate("11144477735"))
 
     def test_validate_cnpj_true(self):
         self.assertTrue(cpfcnpj.validate(self.valid_cnpj))
@@ -41,7 +43,7 @@ class CPFCNPJTests(unittest.TestCase):
         self.assertFalse(cpfcnpj.validate(self.invalid_cnpj))
 
     def test_validate_unicode_cnpj_true(self):
-        self.assertTrue(cpfcnpj.validate(u"11444777000161"))
+        self.assertTrue(cpfcnpj.validate("11444777000161"))
 
     def test_wrong_cpf_size(self):
         self.assertFalse(cpfcnpj.validate(self.invalid_cpf_size))
@@ -78,6 +80,12 @@ class CPFCNPJTests(unittest.TestCase):
 
     def test_validate_cpf_with_alphabetic_characters(self):
         self.assertFalse(cpfcnpj.validate(self.invalid_cpf_with_alphabetic))
+
+    def test_validate_cnpj_with_special_characters(self):
+        self.assertFalse(cpfcnpj.validate(self.invalid_cnpj_with_special_character))
+
+    def test_validate_cpf_with_special_characters(self):
+        self.assertFalse(cpfcnpj.validate(self.invalid_cpf_with_special_character))
 
 
 if __name__ == "__main__":
