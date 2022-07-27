@@ -19,3 +19,4 @@ requests>=2.20.0
 tox==2.7.0
 urllib3>=1.23
 virtualenv==15.1.0
+pre-commit
