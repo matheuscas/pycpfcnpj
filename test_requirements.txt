@@ -1,5 +1,5 @@
 apipkg==1.4
-certifi==2017.4.17
+certifi==2022.12.7
 chardet==3.0.4
 codecov==2.0.9
 coverage==4.0.3
