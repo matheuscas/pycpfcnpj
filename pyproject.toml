@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pycpfcnpj"
+version = "1.7.2"
+description = "Python module for brazilian register numbers for persons (CPF) and companies (CNPJ)."
+authors = ["Matheus CAS <matheus.mcas@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+codecov = "^2.1.13"
+pytest-codecov = "^0.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

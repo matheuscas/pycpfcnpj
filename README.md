@@ -147,6 +147,9 @@ Divirta-se!
 
 Changelog
 -----------
+1.7.2
+- Use poetry to handle dev/test dependencies, building and publishing
+
 1.7.1
 - Fix for cpf/cnpjs containing special characters.
 
