@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pycpfcnpj"
-version = "1.7.2"
+version = "1.8"
 description = "Python module for brazilian register numbers for persons (CPF) and companies (CNPJ)."
 authors = ["Matheus CAS <matheus.mcas@gmail.com>"]
 license = "MIT"
