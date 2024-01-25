@@ -14,7 +14,26 @@ pytest = "^7.4.4"
 codecov = "^2.1.13"
 pytest-codecov = "^0.5.1"
 coverage = "^7.4.0"
+black = "^23.12.1"
+ruff = "^0.1.14"
+pre-commit = "3.5.0" # newer version dropped support for python<3.9
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+include = '\.pyi?$'
+exclude = '''
+/(
+	\.git
+| \.hg
+| \.mypy_cache
+| \.tox
+| \.venv
+| _build
+| buck-out
+| build   
+)/ 
+'''
