@@ -2,8 +2,6 @@ import random
 import string
 
 from . import calculation as calc
-from . import cnpj as cnpj_module
-from . import cpf as cpf_module
 
 
 def cpf():
