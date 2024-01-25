@@ -5,9 +5,7 @@ Description
 -----------
 Python module for brazilian register numbers for persons (CPF) and companies (CNPJ). If want this validation in your web application, please check [my tiny web component](https://github.com/matheuscas/wc-input-cpf-cnpj) that does exactly that. ;)
 
-**Python 3 ready!**
-
-[![Build Status](https://travis-ci.org/matheuscas/pycpfcnpj.png?branch=master)](https://travis-ci.org/matheuscas/pycpfcnpj)
+![Testing](https://github.com/matheuscas/pycpfcnpj/actions/workflows/testing.yaml/badge.svg)
 [![codecov](https://codecov.io/gh/matheuscas/pycpfcnpj/branch/master/graph/badge.svg)](https://codecov.io/gh/matheuscas/pycpfcnpj)
 [![PyPI version](https://badge.fury.io/py/pycpfcnpj.svg)](https://badge.fury.io/py/pycpfcnpj)
 ![Python versions](https://img.shields.io/pypi/pyversions/pycpfcnpj)
@@ -147,6 +145,12 @@ Divirta-se!
 
 Changelog
 -----------
+1.8
+- Dropped travis and python versions under 3.8
+
+1.7.2
+- Use poetry to handle dev/test dependencies, building and publishing
+
 1.7.1
 - Fix for cpf/cnpjs containing special characters.
 
@@ -178,6 +182,12 @@ Changelog
 
 Log de mudanças
 -----------
+1,8
+- Travis fora e versões do Python abaixo de 3.8 não são mais suportadas
+
+1.7.2
+- Use Poetry para lidar com dependências de desenvolvimento/teste, construção e publicação
+
 1.7.1
 - Correção para cpf/cnpjs que contém caracteres especials.
 

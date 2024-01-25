@@ -51,7 +51,3 @@ class CPFTests(unittest.TestCase):
 
     def test_validate_cpf_with_special_characters(self):
         self.assertFalse(cpf.validate(self.invalid_cpf_with_special_character))
-
-
-if __name__ == "__main__":
-    unittest.main(verbosity=2)

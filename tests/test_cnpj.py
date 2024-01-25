@@ -39,7 +39,3 @@ class CNPJTests(unittest.TestCase):
 
     def test_validate_cnpj_with_special_characters(self):
         self.assertFalse(cnpj.validate(self.invalid_cnpj_with_special_character))
-
-
-if __name__ == "__main__":
-    unittest.main(verbosity=2)
