@@ -145,6 +145,9 @@ Divirta-se!
 
 Changelog
 -----------
+1.8.1
+- Added pre-commit with black and ruff configured.
+
 1.8
 - Dropped travis and python versions under 3.8
 
@@ -182,7 +185,10 @@ Changelog
 
 Log de mudanças
 -----------
-1,8
+1.8.1
+- Adicionado pre-commit com black e ruff configurados.
+
+1.8
 - Travis fora e versões do Python abaixo de 3.8 não são mais suportadas
 
 1.7.2
