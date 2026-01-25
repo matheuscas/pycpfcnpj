@@ -1,6 +1,6 @@
 [project]
 name = "pycpfcnpj"
-version = "1.8"
+version = "1.9"
 description = "Python module for brazilian register numbers for persons (CPF) and companies (CNPJ)."
 authors = [{ name = "Matheus CAS", email = "matheus.mcas@gmail.com" }]
 requires-python = ">=3.8,<4"
