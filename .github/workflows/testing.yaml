@@ -26,6 +26,11 @@ jobs:
       - name: Install dependencies
         run: uv sync --locked --all-extras --dev
       #----------------------------------------------
+      # build project
+      #----------------------------------------------
+      - name: Build
+        run: uv build
+      #----------------------------------------------
       #    add matrix specifics and run test suite
       #----------------------------------------------
       - name: Run tests
