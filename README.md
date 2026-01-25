@@ -30,13 +30,16 @@ cpf_number = '11144477735'
 masked_cpf_number = '111.444.777-35'
 cnpj_number = '11444777000161'
 masked_cnpj_number = '11.444.777/0001-61'
+alphanumeric_cnpj = '12ABC34501DE35'
 
 print(cpfcnpj.validate(cpf_number))
 print(cpfcnpj.validate(masked_cpf_number))
 print(cpfcnpj.validate(cnpj_number))
 print(cpfcnpj.validate(masked_cnpj_number))
+print(cpfcnpj.validate(alphanumeric_cnpj))
 
 Expected output:
+>>>True
 >>>True
 >>>True
 >>>True
@@ -98,13 +101,16 @@ cpf_number = '11144477735'
 masked_cpf_number = '111.444.777-35'
 cnpj_number = '11444777000161'
 masked_cnpj_number = '11.444.777/0001-61'
+alphanumeric_cnpj = '12ABC34501DE35'
 
 print(cpfcnpj.validate(cpf_number))
 print(cpfcnpj.validate(masked_cpf_number))
 print(cpfcnpj.validate(cnpj_number))
 print(cpfcnpj.validate(masked_cnpj_number))
+print(cpfcnpj.validate(alphanumeric_cnpj))
 
 Expected output:
+>>>True
 >>>True
 >>>True
 >>>True
@@ -145,6 +151,9 @@ Divirta-se!
 
 Changelog
 -----------
+1.9
+- Added official support for alphanumeric CNPJ (2026+)
+
 1.8
 - Dropped travis and python versions under 3.8
 
@@ -182,7 +191,10 @@ Changelog
 
 Log de mudanças
 -----------
-1,8
+1.9
+- Suporte oficial ao CNPJ alfanumérico (2026+)
+
+1.8
 - Travis fora e versões do Python abaixo de 3.8 não são mais suportadas
 
 1.7.2

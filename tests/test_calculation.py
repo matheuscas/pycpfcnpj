@@ -9,6 +9,7 @@ class CalculationTests(unittest.TestCase):
     def setUp(self):
         self.first_part_cpf_number = '111444777'
         self.first_part_cnpj_number = '114447770001'
+        self.first_part_cnpj_alphanumeric = '12ABC34501DE'
 
     # TESTS FOR CPF DIGITS
     def test_cpf_calculate_first_digit_true(self):
@@ -64,3 +65,31 @@ class CalculationTests(unittest.TestCase):
         self.assertNotEqual(correct_second_digit,
                             calc.calculate_second_digit(updated_cnpj_number))
 
+    # TESTS FOR CNPJ ALPHANUMERIC DIGITS
+    def test_alphanumeric_cnpj_calculate_first_digit_true(self):
+        correct_first_digit = '3'
+        self.assertEqual(correct_first_digit,
+                         calc.calculate_first_digit(self.first_part_cnpj_alphanumeric))
+
+    def test_alphanumeric_cnpj_calculate_first_digit_false(self):
+        incorrect_first_digit = '5'
+        self.assertNotEqual(incorrect_first_digit,
+                            calc.calculate_first_digit(self.first_part_cnpj_alphanumeric))
+
+    def test_alphanumeric_cnpj_calculate_second_digit_true(self):
+        updated_cnpj = (
+            self.first_part_cnpj_alphanumeric +
+            calc.calculate_first_digit(self.first_part_cnpj_alphanumeric)
+        )
+        correct_second_digit = '5'
+        self.assertEqual(correct_second_digit,
+                         calc.calculate_second_digit(updated_cnpj))
+
+    def test_alphanumeric_cnpj_calculate_second_digit_false(self):
+        updated_cnpj = (
+            self.first_part_cnpj_alphanumeric +
+            calc.calculate_first_digit(self.first_part_cnpj_alphanumeric)
+        )
+        incorrect_second_digit = '7'
+        self.assertNotEqual(incorrect_second_digit,
+                            calc.calculate_second_digit(updated_cnpj))

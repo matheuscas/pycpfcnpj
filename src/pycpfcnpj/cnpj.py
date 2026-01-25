@@ -7,9 +7,10 @@ def validate(cnpj_number):
     """This function validates a CNPJ number.
 
     This function uses calculation package to calculate both digits
-    and then validates the number.
+    and then validates the number. Supports both old format (numbers only)
+    and new format (numbers and letters).
 
-    :param cnpj_number: a CNPJ number to be validated.  Only numbers.
+    :param cnpj_number: a CNPJ number to be validated. Can contain numbers and letters.
     :type cnpj_number: string
     :return: Bool -- True for a valid number, False otherwise.
 
@@ -18,6 +19,9 @@ def validate(cnpj_number):
     _cnpj = compat.clear_punctuation(cnpj_number)
 
     if len(_cnpj) != 14 or len(set(_cnpj)) == 1:
+        return False
+
+    if not _cnpj[-2:].isdigit():
         return False
 
     first_part = _cnpj[:12]

@@ -27,6 +27,13 @@ class CPFCNPJTests(unittest.TestCase):
         self.mascared_invalid_cnpj = "11.444.777/0001-62"
         self.mascared_invalid_cnpj_size = "114.447/7700-01"
 
+        self.valid_alphanumeric_cnpj = "12ABC34501DE35"
+        self.invalid_alphanumeric_cnpj_dv = "12ABC34501DE36"
+        self.invalid_alphanumeric_cnpj_size = "12ABC34501DE3"
+        self.invalid_alphanumeric_cnpj_whitespace = "12ABC 34501DE35"
+        self.invalid_alphanumeric_cnpj_with_special_char = "12ABC34501DE@5"
+        self.invalid_alphanumeric_cnpj_letters_in_verifier = "12ABC34501DEA5"
+
     def test_validate_cpf_true(self):
         self.assertTrue(cpfcnpj.validate(self.valid_cpf))
 
@@ -86,6 +93,24 @@ class CPFCNPJTests(unittest.TestCase):
 
     def test_validate_cpf_with_special_characters(self):
         self.assertFalse(cpfcnpj.validate(self.invalid_cpf_with_special_character))
+
+    def test_validate_alphanumeric_cnpj_true(self):
+        self.assertTrue(cpfcnpj.validate(self.valid_alphanumeric_cnpj))
+
+    def test_validate_alphanumeric_cnpj_invalid_dv(self):
+        self.assertFalse(cpfcnpj.validate(self.invalid_alphanumeric_cnpj_dv))
+
+    def test_validate_alphanumeric_cnpj_wrong_size(self):
+        self.assertFalse(cpfcnpj.validate(self.invalid_alphanumeric_cnpj_size))
+
+    def test_validate_alphanumeric_cnpj_with_whitespace(self):
+        self.assertFalse(cpfcnpj.validate(self.invalid_alphanumeric_cnpj_whitespace))
+
+    def test_validate_alphanumeric_cnpj_with_special_character(self):
+        self.assertFalse(cpfcnpj.validate(self.invalid_alphanumeric_cnpj_with_special_char))
+
+    def test_validate_alphanumeric_cnpj_letters_in_verifier(self):
+        self.assertFalse(cpfcnpj.validate(self.invalid_alphanumeric_cnpj_letters_in_verifier))
 
 
 if __name__ == "__main__":

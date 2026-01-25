@@ -1,7 +1,8 @@
 def check_special_characters(func):
     def wrapper(document):
-        not_digit = [i for i in clear_punctuation(document) if not i.isdigit()]
-        return False if not_digit else func(document)
+        cleared_doc = clear_punctuation(document)
+        invalid_chars = [i for i in cleared_doc if not (i.isdigit() or i.isalpha())]
+        return False if invalid_chars else func(document)
 
     return wrapper
 
