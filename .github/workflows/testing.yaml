@@ -26,12 +26,7 @@ jobs:
       - name: Install dependencies
         run: uv sync --locked --all-extras --dev
       #----------------------------------------------
-      # build project
-      #----------------------------------------------
-      - name: Build
-        run: uv build
-      #----------------------------------------------
-      #    add matrix specifics and run test suite
+      # Run tests
       #----------------------------------------------
       - name: Run tests
         run: uv run pytest --cov=pycpfcnpj/
