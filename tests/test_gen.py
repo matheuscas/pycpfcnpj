@@ -29,3 +29,8 @@ class GenerateCNPJTest(unittest.TestCase):
     def test_valid_cnpj_without_mask_true(self):
         cnpj_result = (self.masked_valid_cnpj.replace(".", "")).replace("-", "")
         self.assertTrue(cnpj.validate(cnpj_result))
+
+    def test_generated_alphanumeric_cnpj_is_valid(self):
+        for _ in range(50):
+            self.assertTrue(cnpj.validate(gen.cnpj(alphanumeric=True)))
+            self.assertTrue(cnpj.validate(gen.cnpj_with_punctuation(alphanumeric=True)))

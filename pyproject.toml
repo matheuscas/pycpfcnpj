@@ -1,20 +1,69 @@
-[tool.poetry]
+[project]
 name = "pycpfcnpj"
-version = "1.8"
 description = "Python module for brazilian register numbers for persons (CPF) and companies (CNPJ)."
-authors = ["Matheus CAS <matheus.mcas@gmail.com>"]
+authors = [{ name = "Matheus CAS", email = "matheus.mcas@gmail.com" }]
+maintainers = [{ name = "Marcelo Majer", email = "marcelo.majer@yahoo.com.br" }]
 license = "MIT"
 readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["cpf", "cnpj", "brazil", "validation", "document", "validator"]
+dependencies = []
+# Single source of truth for the version is Cargo.toml (maturin reads it).
+dynamic = ["version"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Rust",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
+[project.urls]
+Homepage = "https://github.com/matheuscas/pycpfcnpj"
+Repository = "https://github.com/matheuscas/pycpfcnpj"
+Changelog = "https://github.com/matheuscas/pycpfcnpj/blob/master/README.md#changelog"
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.4.4"
-codecov = "^2.1.13"
-pytest-codecov = "^0.5.1"
-coverage = "^7.4.0"
+[tool.maturin]
+# Mixed Rust/Python project: the Python package lives in ./python/pycpfcnpj and
+# the compiled extension is placed inside it as pycpfcnpj._speedups.
+python-source = "python"
+module-name = "pycpfcnpj._speedups"
+# extension-module is an opt-in crate feature (so `cargo test` still links
+# libpython); maturin turns it on for the wheel. abi3-py38 is always on.
+features = ["extension-module"]
+
+[tool.ruff]
+target-version = "py38"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "C4"]
+
+[tool.mypy]
+# Type-check against the newest interpreter (mypy 2.x requires >=3.10); the CI
+# matrix exercises the >=3.8 runtime floor, and ruff (target py38) guards syntax.
+files = ["python/pycpfcnpj"]
+disallow_untyped_defs = true
+warn_redundant_casts = true
+no_implicit_optional = true
+
+[dependency-groups]
+dev = [
+    "pytest>=7.4.4",
+    "pytest-cov>=4.1.0",
+    "coverage>=7.4.0",
+    "mypy>=1.8.0",
+    "ruff>=0.5.0",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"

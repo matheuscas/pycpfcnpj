@@ -22,10 +22,15 @@ __pycache__
 # Installer logs
 pip-log.txt
 
+# Virtualenv
+.venv/
+
 # Unit test / coverage reports
 .coverage
 .tox
 nosetests.xml
+coverage.xml
+htmlcov/
 
 # Translations
 *.mo
@@ -42,3 +47,11 @@ nosetests.xml
 
 #tests
 .cache/
+.pytest_cache/
+
+# Linters / type checkers
+.ruff_cache/
+.mypy_cache/
+
+# Rust
+/target

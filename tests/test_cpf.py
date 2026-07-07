@@ -29,7 +29,7 @@ class CPFTests(unittest.TestCase):
 
     def test_validate_cpf_with_same_numbers(self):
         for i in range(10):
-            self.assertFalse(cpf.validate("{0}".format(i) * 11))
+            self.assertFalse(cpf.validate(f"{i}" * 11))
 
     def test_validate_cpf_unicode_true(self):
         self.assertTrue(cpf.validate("11144477735"))

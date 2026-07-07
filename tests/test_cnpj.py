@@ -17,9 +17,18 @@ class CNPJTests(unittest.TestCase):
 
         self.valid_alphanumeric_cnpj = "12ABC34501DE35"
         self.invalid_alphanumeric_dv = "12ABC34501DE36"
-        self.invalid_letters_in_verifier = ["12ABC34501DEA5", "12ABC34501DE3A",]
-        self.invalid_alphanumeric_characters = ["12ABC34501DE@5", "12ABC34501DE 5",]
-        self.invalid_alphanumeric_length = ["12ABC34501DE3", "12ABC34501DE350",]
+        self.invalid_letters_in_verifier = [
+            "12ABC34501DEA5",
+            "12ABC34501DE3A",
+        ]
+        self.invalid_alphanumeric_characters = [
+            "12ABC34501DE@5",
+            "12ABC34501DE 5",
+        ]
+        self.invalid_alphanumeric_length = [
+            "12ABC34501DE3",
+            "12ABC34501DE350",
+        ]
 
     def test_validate_cnpj_true(self):
         self.assertTrue(cnpj.validate(self.valid_cnpj))
@@ -35,7 +44,7 @@ class CNPJTests(unittest.TestCase):
 
     def test_validate_cnpj_with_same_numbers(self):
         for i in range(10):
-            self.assertFalse(cnpj.validate("{0}".format(i) * 14))
+            self.assertFalse(cnpj.validate(f"{i}" * 14))
 
     def test_validate_cnpj_with_whitespaces(self):
         self.assertFalse(cnpj.validate(self.invalid_cnpj_whitespaces))

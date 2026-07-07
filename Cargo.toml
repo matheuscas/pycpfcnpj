@@ -1,0 +1,27 @@
+[package]
+name = "pycpfcnpj"
+version = "2.0.0"
+edition = "2021"
+description = "Native CPF/CNPJ validation core for the pycpfcnpj Python package"
+license = "MIT"
+
+[lib]
+name = "_speedups"
+# cdylib: the importable Python extension. rlib: lets `cargo test` build a test
+# harness against the crate.
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# abi3-py38: a single wheel per platform works on CPython 3.8+ (incl. future
+# versions) — no rebuild needed when a new Python ships.
+pyo3 = { version = "0.26", features = ["abi3-py38"] }
+
+[features]
+# Enabled by maturin when building the wheel (see [tool.maturin] features).
+# Kept out of the default set so `cargo test` links libpython and runs.
+extension-module = ["pyo3/extension-module"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3

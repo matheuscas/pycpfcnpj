@@ -51,7 +51,21 @@ You can use, as well, the cpf and cnpj packages. The cpfcnpj is like a Facade to
 
 Oh, fork and contribute either if you want to.
 
-Obs.: There is no dependencies.
+### Native backend & fallback
+
+Since 2.0, validation runs on a compiled **Rust core** shipped as prebuilt
+wheels — you install a binary, no Rust toolchain required. On platforms without
+a wheel (or when installed from sdist) it transparently falls back to an
+optimized **pure-Python** implementation, so it always works. There are **no
+runtime Python dependencies** either way.
+
+```python
+import pycpfcnpj
+print(pycpfcnpj.BACKEND)  # 'rust' or 'python'
+```
+
+Set `PYCPFCNPJ_PUREPYTHON=1` to force the pure-Python path (useful for
+benchmarking or debugging).
 
 Oh, and before I forget, you can generate, only and only for test purposes, a CPF or CNPJ number using the 'gen' module. Easy like above:
 
@@ -120,7 +134,14 @@ Expected output:
 Simples assim! Você também pode usar os pacotes internos que tratam em separado os números de CPF e CNPJ. 
 O módulo 'cpfcnpj' é um tipo de interface para os módulos mais específicos e se encarrega de saber quando você está passando um CPF ou um CNPJ.
 
-Fique à vontade em contribuir com o projeto ou da maneira que quiser. Ah, sim: pure python (sem dependências ;) ).
+Fique à vontade em contribuir com o projeto ou da maneira que quiser.
+
+A partir da 2.0 a validação roda sobre um **core em Rust** distribuído como
+wheels pré-compiladas (o usuário instala um binário, sem precisar de toolchain
+Rust). Em plataformas sem wheel — ou quando instalado via sdist — há
+*fallback* automático para uma implementação **pure-Python** otimizada. De
+qualquer forma, **sem dependências Python em runtime**. Use
+`PYCPFCNPJ_PUREPYTHON=1` para forçar o caminho pure-Python.
 
 Ah, e antes que eu me esqueça, você pode gerar, só e apenas somente para fins de teste, um número de CPF ou CNPJ utilizando o módulo 'gen'. Fácil como acima:
 
@@ -151,6 +172,12 @@ Divirta-se!
 
 Changelog
 -----------
+2.0
+- Native Rust validation core (prebuilt wheels) with automatic pure-Python fallback
+- `gen.cnpj(alphanumeric=True)` generates 2026 alphanumeric CNPJs
+- Removed the internal `calculation` and `compatible` modules (**breaking**); public API (`cpf`/`cnpj`/`cpfcnpj`/`gen`) is unchanged
+- Top-level `pycpfcnpj.validate`/`validate_cpf`/`validate_cnpj`/`BACKEND`/`__version__`
+
 1.9
 - Added official support for alphanumeric CNPJ (2026+)
 
@@ -191,6 +218,12 @@ Changelog
 
 Log de mudanças
 -----------
+2.0
+- Core de validação nativo em Rust (wheels pré-compiladas) com fallback pure-Python automático
+- `gen.cnpj(alphanumeric=True)` gera CNPJs alfanuméricos (2026)
+- Removidos os módulos internos `calculation` e `compatible` (**breaking**); a API pública (`cpf`/`cnpj`/`cpfcnpj`/`gen`) não mudou
+- API de topo `pycpfcnpj.validate`/`validate_cpf`/`validate_cnpj`/`BACKEND`/`__version__`
+
 1.9
 - Suporte oficial ao CNPJ alfanumérico (2026+)
 

@@ -1,8 +1,7 @@
-from . import cnpj, cpf
-from .compatible import clear_punctuation
+from ._backend import validate as _validate
 
 
-def validate(number):
+def validate(number: str) -> bool:
     """This functions acts like a Facade to the other modules cpf and cnpj
     and validates either CPF and CNPJ numbers.
     Feel free to use this or the other modules directly.
@@ -14,10 +13,4 @@ def validate(number):
              with the right size of these numbers.
 
     """
-    clean_number = clear_punctuation(number)
-
-    if len(clean_number) == 11:
-        return cpf.validate(clean_number)
-    elif len(clean_number) == 14:
-        return cnpj.validate(clean_number)
-    return False
+    return _validate(number)

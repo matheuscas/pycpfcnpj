@@ -1,22 +1,22 @@
 Code Documentation
 ===================================
 
-pycpfcnpj.calculation
---------------------
-.. automodule:: calculation
-   :members: 
-
 pycpfcnpj.cpf
 --------------------
-.. automodule:: cpf
+.. automodule:: pycpfcnpj.cpf
    :members:
 
 pycpfcnpj.cnpj
 --------------------
-.. automodule:: cnpj
+.. automodule:: pycpfcnpj.cnpj
    :members:
 
 pycpfcnpj.cpfcnpj
 --------------------
-.. automodule:: cpfcnpj
-   :members:                  
+.. automodule:: pycpfcnpj.cpfcnpj
+   :members:
+
+pycpfcnpj.gen
+--------------------
+.. automodule:: pycpfcnpj.gen
+   :members:
