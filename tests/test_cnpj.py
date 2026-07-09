@@ -63,3 +63,8 @@ class CNPJTests(unittest.TestCase):
     def test_validate_alphanumeric_invalid_length(self):
         for cnpj_number in self.invalid_alphanumeric_length:
             self.assertFalse(cnpj.validate(cnpj_number))
+
+    def test_validate_cnpj_with_non_ascii_digit_does_not_raise(self):
+        # '²'.isdigit() is True but int('²') raises inside the digit
+        # calculation; the ASCII guard must reject it instead of crashing.
+        self.assertFalse(cnpj.validate("²2345678901234"))
