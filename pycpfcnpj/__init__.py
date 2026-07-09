@@ -1,2 +1,7 @@
+from importlib.metadata import PackageNotFoundError, version
+
 __author__ = 'Matheus Cardoso'
-__version__ = '1.5.1'
+try:
+    __version__ = version("pycpfcnpj")
+except PackageNotFoundError:  # package is not installed
+    __version__ = "0.0.0.dev0"
