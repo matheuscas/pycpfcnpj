@@ -51,3 +51,14 @@ class CPFTests(unittest.TestCase):
 
     def test_validate_cpf_with_special_characters(self):
         self.assertFalse(cpf.validate(self.invalid_cpf_with_special_character))
+
+    def test_validate_cpf_with_letter_matching_check_digits(self):
+        # A letter in the body can produce "matching" check digits once the
+        # alphanumeric-CNPJ conversion leaks into the CPF path. CPFs are
+        # numeric-only, so this must be rejected.
+        self.assertFalse(cpf.validate("12345678A58"))
+
+    def test_validate_cpf_with_non_ascii_digit_does_not_raise(self):
+        # '²'.isdigit() is True but int('²') raises; a numeric-only guard
+        # based on isascii() must reject it instead of crashing.
+        self.assertFalse(cpf.validate("²2345678901"))

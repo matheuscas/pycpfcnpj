@@ -20,6 +20,9 @@ def validate(cpf_number):
     if len(_cpf) != 11 or len(set(_cpf)) == 1:
         return False
 
+    if not (_cpf.isascii() and _cpf.isdigit()):
+        return False
+
     first_part = _cpf[:9]
     second_part = _cpf[:10]
     first_digit = _cpf[9]

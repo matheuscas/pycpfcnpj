@@ -21,6 +21,9 @@ def validate(cnpj_number):
     if len(_cnpj) != 14 or len(set(_cnpj)) == 1:
         return False
 
+    if not _cnpj.isascii():
+        return False
+
     if not _cnpj[-2:].isdigit():
         return False
 
